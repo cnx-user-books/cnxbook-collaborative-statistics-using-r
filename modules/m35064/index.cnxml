@@ -1,0 +1,87 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Data</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m35064</md:content-id>
+  <md:title>Data</md:title>
+  <md:abstract>This module introduces the concepts of qualitative data, quantitative continuous data, and quantitative discrete data as used in statistics.  Sample problems are included.</md:abstract>
+  <md:uuid>ce7a7245-8297-4bec-b2a9-c1a790d6690e</md:uuid>
+</metadata>
+
+<content>
+    
+
+      <para id="id7862377">Data may come from a population or from a sample. Small letters like <m:math>
+		<m:mi>x</m:mi>
+</m:math> or <m:math>
+		<m:mi>y</m:mi>
+	</m:math> generally are used to represent data values. Most data can be put into the following categories:  </para>
+      <list id="id10607985" list-type="bulleted"><item>
+          Qualitative
+        </item>
+        <item>Quantitative</item>
+      </list>
+      <para id="id9602938"><emphasis>Qualitative data</emphasis> are the result of categorizing or describing attributes of a population. Hair color, blood type, ethnic group, the car a person drives, and the street a person lives on are examples of qualitative data. Qualitative data are generally described by words or letters. For instance, hair color might be black, dark brown, light brown, blonde, gray, or red. Blood type might be AB+, O-, or B+. Qualitative data are not as widely used as quantitative data because many numerical techniques do not apply to the qualitative data. For example, it does not make sense to find an average hair color or blood type.</para>
+      <para id="id3365343"><emphasis>Quantitative data</emphasis> are always numbers and are usually the data of choice because there are many methods available for analyzing the data. Quantitative data are the result of <emphasis>counting</emphasis> or <emphasis>measuring</emphasis> attributes of a population. Amount of money, pulse rate, weight, number of people living in your town, and the number of students who take statistics are examples of quantitative data. Quantitative data may be either <term target-id="discrrv">discrete</term> or <term target-id="continrv">continuous</term>.</para>
+      <para id="id9750754">All data that are the result of counting are called <emphasis>quantitative discrete data</emphasis>. These data take on only certain numerical values. If you count the number of phone calls you receive for each day of the week, you might get 0, 1, 2, 3, etc. </para>
+      <para id="id5023881">All data that are the result of measuring are <emphasis>quantitative continuous data</emphasis> assuming that we can measure accurately. Measuring angles in radians might result in the numbers <m:math><m:mfrac><m:mi>π</m:mi><m:mn>6</m:mn></m:mfrac> </m:math>, 
+<m:math><m:mfrac><m:mi>π</m:mi><m:mn>3</m:mn></m:mfrac></m:math> ,<m:math><m:mfrac><m:mi>π</m:mi><m:mn>2</m:mn></m:mfrac></m:math> , 
+<m:math><m:mi>π</m:mi></m:math> ,
+<m:math><m:mfrac><m:mi>3π</m:mi><m:mn>4</m:mn></m:mfrac></m:math> , etc. If you and your friends carry backpacks with books in them to school, the numbers of books in the backpacks are discrete data and the weights of the backpacks are continuous data.</para>
+     <example id="onetwo"><title>Data Sample of Quantitative Discrete Data</title><para id="id3406867">The data are the number of books students carry in their backpacks. You sample five students. Two students carry 3 books, one student carries 4 books, one student carries 2 books, and one student carries 1 book. The numbers of books (3, 4, 2, and 1) are the quantitative discrete data.</para>
+     </example>
+     <example id="onethree"><title>Data Sample of Quantitative Continuous Data</title><para id="id3944554">The data are the weights of the backpacks with the books in it. You sample the same five students. The weights (in pounds) of their backpacks are 6.2, 7, 6.8, 9.1, 4.3. Notice that backpacks carrying three books can have different weights. Weights are quantitative continuous data because weights are measured.</para>
+     </example>
+     <example id="onefour"><title>Data Sample of Qualitative Data</title><para id="id11979238">The data are the colors of backpacks. Again, you sample the same five students. One student has a red backpack, two students have black backpacks, one student has a green backpack, and one student has a gray backpack. The colors red, black, black, green, and gray are qualitative data. </para>
+</example>
+      
+<note id="id14887994">You may collect data as numbers and report it categorically. For example, the quiz scores for each student are recorded throughout the term. At the end of the term, the quiz scores are reported as A, B, C, D, or F.</note>
+  </content>
+
+<glossary>
+
+<definition id="continrv">
+    <term>Continuous Random Variable</term>
+    <meaning id="id20531650">
+     A random variable (RV) whose outcomes are measured.
+    </meaning>
+<example id="contrvex"> <para id="contrvpara">The height of trees in the forest is a continuous RV.</para></example>
+  </definition>
+
+
+   <definition id="data">
+    <term>Data</term>
+    <meaning id="id14523917">
+      A set of observations (a set of possible outcomes). Most data can be put into two groups: <emphasis>qualitative</emphasis> (hair color, ethnic groups and many other <emphasis>attributes</emphasis> of population) and <emphasis>quantitative</emphasis> (distance traveled to college, number of children in a family, etc.). In its turn quantitative data can be separated into two subgroups: <emphasis>discrete</emphasis> and <emphasis>continuous</emphasis>. Roughly speaking, data is discrete if it is result of counting (a number of student of the given ethnic group in a class, a number of books on a shelf, etc.), and data is continuous if it is result of measuring (distance traveled, weight of luggage, etc.)
+    </meaning>
+  </definition>
+
+
+<definition id="discrrv">
+    <term>Discrete Random Variable</term>
+    <meaning id="id18678019">
+ A random variable (RV) whose outcomes are counted. 
+  </meaning>
+  </definition>
+
+
+
+<definition id="qual">
+    <term>Qualitative Data</term>
+    <meaning id="id14429967">
+
+    See <term target-id="data">Data</term>.
+    </meaning>
+  </definition>
+
+
+<definition id="quant">
+    <term>Quantitative Data</term>
+    <meaning id="id14429999">
+See <term target-id="data">Data</term>.
+    </meaning>
+  </definition>
+
+
+</glossary>
+
+</document>

@@ -1,0 +1,119 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Frequency and Contingency Tables in R</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m45184</md:content-id>
+  <md:title>Frequency and Contingency Tables in R</md:title>
+  <md:abstract>A brief module demonstrating the table, prop.table, and related functions in R to complement the content found in Collaborative Statistics.</md:abstract>
+  <md:uuid>c471a3e5-a0ec-47fb-a559-1802c7d827ec</md:uuid>
+</metadata>
+
+<content>
+  <para id="eip-742">The examples in the previous section provided you with contingency tables and asked you to calculate row, column, and cell percentages and totals. In real practice, you will most likely be dealing with raw data that needs to first be summarized before creating the contingency tables. This section will introduce some of the many methods that can be used in R to calculate frequencies and create contingency tables.</para><para id="eip-382">Here, we will generate some sample data and view the first and last few lines of the dataset. In reality, you would probably have additional variables in the dataset, in which case when you are creating your tables, you will have to specify the columns to tabulate.  </para>
+<code id="eip-682" display="block">
+set.seed(1)
+myDF = data.frame(car.phone.use = sample(c(TRUE, FALSE), 755, 
+                                          replace=TRUE, prob=c(.4, .6)),
+                   speed.violation = sample(c(TRUE, FALSE), 755,
+                                            replace=TRUE, prob=c(.1, .9)))
+# First few cases
+head(myDF)
+##   car.phone.use speed.violation
+## 1         FALSE           FALSE
+## 2         FALSE           FALSE
+## 3         FALSE           FALSE
+## 4          TRUE            TRUE
+## 5         FALSE           FALSE
+## 6          TRUE           FALSE
+# Last few cases
+tail(myDF)
+##     car.phone.use speed.violation
+## 750          TRUE           FALSE
+## 751         FALSE           FALSE
+## 752          TRUE           FALSE
+## 753         FALSE           FALSE
+## 754         FALSE           FALSE
+## 755         FALSE           FALSE</code>
+<para id="eip-212">R has several useful in-built functions for tabulation and contingency tables. In particular, the functions <code>table()</code> and <code>prop.table()</code> are a good starting point. The <code>table()</code> function will create a basic cross table of the specified variables. The <code>prop.table()</code> takes a table (or matrix) as its input and is usually used to return cell percentages (no second argument), row percentages (<code>1</code> as the second argument), or column percentages (<code>2</code> as the second argument).</para>
+<code id="eip-399" display="block">
+# Simple tabulation of the two variables
+myTable = table(myDF)
+myTable
+##              speed.violation
+## car.phone.use FALSE TRUE
+##         FALSE   411   48
+##         TRUE    264   32
+
+# Adding row and column sums
+addmargins(myTable)
+##              speed.violation
+## car.phone.use FALSE TRUE Sum
+##         FALSE   411   48 459
+##         TRUE    264   32 296
+##         Sum     675   80 755
+
+# Cell percentages of total
+prop.table(myTable)
+##              speed.violation
+## car.phone.use   FALSE    TRUE
+##         FALSE 0.54437 0.06358
+##         TRUE  0.34967 0.04238
+
+# Row percentages
+prop.table(myTable, 1)
+##              speed.violation
+## car.phone.use  FALSE   TRUE
+##         FALSE 0.8954 0.1046
+##         TRUE  0.8919 0.1081
+
+# Column percentages
+prop.table(myTable, 2)
+##              speed.violation
+## car.phone.use  FALSE   TRUE
+##         FALSE 0.6089 0.6000
+##         TRUE  0.3911 0.4000
+</code>
+<para id="eip-856">An alternative to creating these tables separately is to use the <code>CrossTable()</code> function from the "<code>gmodels</code>" package (installed by using <code>install.packages("gmodels")</code> (only required once) and loaded using <code>library(gmodels)</code> (required once per R session)).</para>
+<code id="eip-761" display="block">
+# Uncomment the following to install the  
+#    `gmodels` package if not yet installed.  
+# install.packages('gmodels')
+library(gmodels)
+CrossTable(myTable)
+## 
+##  
+##    Cell Contents
+## |-------------------------|
+## |                       N |
+## | Chi-square contribution |
+## |           N / Row Total |
+## |           N / Col Total |
+## |         N / Table Total |
+## |-------------------------|
+## 
+##  
+## Total Observations in Table:  755 
+## 
+##  
+##               | speed.violation 
+## car.phone.use |     FALSE |      TRUE | Row Total | 
+## --------------|-----------|-----------|-----------|
+##         FALSE |       411 |        48 |       459 | 
+##               |     0.001 |     0.008 |           | 
+##               |     0.895 |     0.105 |     0.608 | 
+##               |     0.609 |     0.600 |           | 
+##               |     0.544 |     0.064 |           | 
+## --------------|-----------|-----------|-----------|
+##          TRUE |       264 |        32 |       296 | 
+##               |     0.002 |     0.013 |           | 
+##               |     0.892 |     0.108 |     0.392 | 
+##               |     0.391 |     0.400 |           | 
+##               |     0.350 |     0.042 |           | 
+## --------------|-----------|-----------|-----------|
+##  Column Total |       675 |        80 |       755 | 
+##               |     0.894 |     0.106 |           | 
+## --------------|-----------|-----------|-----------|
+</code>
+</content>
+
+</document>

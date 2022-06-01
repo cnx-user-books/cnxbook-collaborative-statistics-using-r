@@ -1,0 +1,197 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Sampling</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m35067</md:content-id>
+  <md:title>Sampling</md:title>
+  <md:abstract>This module introduces the concept of statistical sampling.  Students are taught the difference between a simple random sample, stratified sample, cluster sample, systematic sample, and convenience sample.  Example problems are provided, including an optional classroom activity.</md:abstract>
+  <md:uuid>22541af5-0ff8-4f08-aaf5-71e0a5349bb6</md:uuid>
+</metadata>
+
+<content>
+    
+
+      <para id="id12361474">Gathering information about an entire population often costs too much or is virtually impossible. Instead, we use a sample of the population. <emphasis>A sample should have the same characteristics as the population it is representing.</emphasis> Most statisticians use various methods of random sampling in an attempt to achieve this goal. This section will describe a few of the most common methods.</para>
+      
+      <para id="id12311519">There are several different methods of <emphasis>random sampling</emphasis>. In each form of random sampling, each member of a population initially has an equal chance of being selected for the sample. Each method has pros and cons. The easiest method to describe is called a <emphasis>simple random sample</emphasis>. Two simple random samples contain members equally representative of the entire population. In other words, each sample of the same size has an equal chance of being selected. For example, suppose Lisa wants to form a four-person study group (herself and three other people) from her pre-calculus class, which has 33 members including Lisa. To choose a simple random sample of size 3 from the other members of her class, Lisa could put all the other 32 names in a hat, shake the hat, close her eyes, and pick out 3 names. A more technological way is for Lisa to first list the names of her classmates together with a two-digit number as shown below.</para>
+      <table id="element-621" summary="This table presents a class roster arranged in alphabetical order. The first column lists a unique two-digit ID number for each student, with the second column displaying the student's last name."><title>Class Roster</title>
+<tgroup cols="6"><colspec colnum="1" colname="id"/>
+<colspec colnum="2" colname="name"/>
+<colspec colnum="3" colname="id2"/>
+<colspec colnum="4" colname="name2"/>
+<colspec colnum="5" colname="id3"/>
+<colspec colnum="6" colname="name3"/>
+    <thead>
+      <row>
+        <entry>ID</entry>
+        <entry>Name</entry>
+        <entry>ID</entry>
+        <entry>Name</entry>
+        <entry>ID</entry>
+        <entry>Name</entry>
+      </row>
+    </thead>
+<tbody>
+  <row>
+    <entry>01</entry>
+    <entry>Anselmo</entry>
+    <entry>12</entry>
+    <entry>Larry</entry>
+    <entry>23</entry>
+    <entry>Rowell</entry>
+    </row>
+  <row>
+    <entry>02</entry>
+    <entry>Bayani</entry>
+    <entry>13</entry>
+    <entry>Lizzy</entry>
+    <entry>24</entry>
+    <entry>Salangsang</entry>
+    </row>
+  <row>
+    <entry>03</entry>
+    <entry>Cheng</entry>
+    <entry>14</entry>
+    <entry>Macierz</entry>
+    <entry>25</entry>
+    <entry>Slade</entry>
+    </row>
+  <row>
+    <entry>04</entry>
+    <entry>Cuarismo</entry>
+    <entry>15</entry>
+    <entry>Motogawa</entry>
+    <entry>26</entry>
+    <entry>Stracher</entry>
+    </row>
+  <row>
+    <entry>05</entry>
+    <entry>Cuningham</entry>
+    <entry>16</entry>
+    <entry>Okimoto</entry>
+    <entry>27</entry>
+    <entry>Tallai</entry>
+    </row>
+  <row>
+    <entry>06</entry>
+    <entry>Fontecha</entry>
+    <entry>17</entry>
+    <entry>Patel</entry>
+    <entry>28</entry>
+    <entry>Tran</entry>
+    </row>
+  <row>
+    <entry>07</entry>
+    <entry>Hong</entry>
+    <entry>18</entry>
+    <entry>Price</entry>
+    <entry>29</entry>
+    <entry>Wai</entry>
+    </row>
+  <row>
+    <entry>08</entry>
+    <entry>Hoobler</entry>
+    <entry>19</entry>
+    <entry>Quizon</entry>
+    <entry>30</entry>
+    <entry>Wood</entry>
+    </row>
+  <row>
+    <entry>09</entry>
+    <entry>Jiao</entry>
+    <entry>20</entry>
+    <entry>Reyes</entry>
+    <entry>31</entry>
+    <entry>Yogi</entry>
+    </row>
+  <row>
+    <entry>10</entry>
+    <entry>Khan</entry>
+    <entry>21</entry>
+    <entry>Roquero</entry>
+    <entry>32</entry>
+    <entry>Zoe</entry>
+    </row>
+  <row>
+    <entry>11</entry>
+    <entry>King</entry>
+    <entry>22</entry>
+    <entry>Roth</entry>
+    <entry> </entry>
+    <entry> </entry>
+    </row>
+</tbody>
+</tgroup>
+</table>
+      <para id="id10904793">Lisa can either use a table of random numbers (found in many statistics books as well as mathematical handbooks) or a calculator or computer to generate random numbers. For this example, suppose Lisa chooses to generate random numbers by using R. She enters the statement <code>sample(32, 3)</code>, where 32 is the number of students in the class (excluding herself), and 3 is the number of samples she wants. If she wants her random sample to be replicable, she needs to set a seed for her sample by using the <code>set.seed()</code> as demonstrated in the second example. When you try this exercise, you should get different results if you are not using a seed value or if you are using a different seed value from the one in the example code. </para>
+      <note id="eip-839" type="tip">Use <code>set.seed()</code> whenever you want to be able to reproduce your results. You can, for instance, set the seed at the date that you are first running your experiment. For example, if your first experiment was being done on August 1 2010, you might write 20100801 for your seed. Every time you re-run your experiment use the same date from your original experiment as your seed, and your output will be the same.</note><code id="eip-866" display="block">
+# A random sample of 3 from 32
+sample(32, 3)
+## [1]  7 10 32
+# Using set.seed() to get a reproducible sample
+# The seed can be any number you want
+set.seed(123)
+sample(32, 3)
+## [1] 10 25 13
+
+</code><para id="eip-674">Using this information, Lisa will select the students with the ID numbers generated by R.</para><para id="id11076554">Sometimes, it is difficult or impossible to obtain a simple random sample because populations are too large. Then we choose other forms of sampling methods that involve a chance process for getting the sample. <emphasis>Other well-known random sampling methods are the stratified sample, the cluster sample, and the systematic sample.</emphasis></para>
+      <para id="id12511076">To choose a <emphasis>stratified sample</emphasis>, divide the population into groups called strata and then take a sample from each stratum. For example, you could stratify (group) your college population by department and then choose a simple random sample from each stratum (each department) to get a stratified random sample.  To choose a simple random sample from each department, number each member of the first department, number each member of the second department and do the same for the remaining departments.  Then use simple random sampling to choose numbers from the first department and do the same for each of the  remaining departments.  Those numbers picked from the first department, picked from the second department and so on represent the members who make up the stratified sample.</para>
+      <para id="id13017093">To choose a <emphasis>cluster sample</emphasis>, divide the population into strata and then randomly select some of the strata. All the members from these strata are in the cluster sample. For example, if you randomly sample four departments from your stratified college population, the four departments make up the cluster sample.  You could do this by numbering the different departments and then choose four different numbers using simple random sampling.  All members of the four departments with those numbers are the cluster sample. </para>
+      <para id="id12769433">To choose a <emphasis>systematic sample</emphasis>, randomly select a starting point and take every nth piece of data from a listing of the population. For example, suppose you have to do a phone survey. Your phone book contains 20,000 residence listings. You must choose 400 names for the sample. Number the population 1 - 20,000 and then use a simple random sample to pick a number that represents the first name of the sample. Then choose every 50th name thereafter until you have a total of 400 names (you might have to go back to the of your phone list). Systematic sampling is frequently chosen because it is a simple method.</para>
+      <para id="id12385449">A type of sampling that is nonrandom is convenience sampling. <emphasis>Convenience sampling</emphasis> involves using results that are readily available. For example, a computer software store conducts a marketing study by interviewing potential customers who happen to be in the store browsing through the available software. The results of convenience sampling may be very good in some cases and highly biased (favors certain outcomes) in others.</para>
+      <para id="id10814456">Sampling data should be done very carefully. Collecting data carelessly can have devastating results. Surveys mailed to households and then returned may be very biased (for example, they may favor a certain group). It is better for the person conducting the survey to select the sample respondents.</para>
+      <para id="eip-781">In reality, simple random sampling should be done <emphasis>with replacement</emphasis>  That is, once a member is picked that member goes back into the population and thus may be chosen more than once.  This is true random sampling.  However for practical reasons, in most populations, simple random sampling is done <emphasis>without replacement</emphasis>.  That is, a member of the population may be chosen only once.   Most samples are taken from large populations and the sample tends to be small in comparison to the population.  Since this is the case, sampling without replacement is approximately the same as sampling with replacement because the chance of picking the same sample more than once using with replacement is very low.   
+
+</para><para id="eip-277">For example, in a college population of 10,000 people, suppose you want to pick a sample of 1000 for a survey.  <emphasis>For any particular sample of 1000</emphasis>, if you are sampling <emphasis>with replacement</emphasis>, </para><list id="eip-447"><item>the chance of picking the first person is 1000 out of 10,000 (0.1000);</item>
+<item>the chance of picking a different second person for this sample is 999 out of 10,000 (0.0999);</item>
+<item>the chance of picking the same person again is 1 out of 10,000 (very low). </item>
+</list><para id="eip-646">If you are sampling <emphasis>without replacement</emphasis>,</para><list id="eip-546"><item>the chance of picking the first person for any particular sample is 1000 out of 10,000 (0.1000);</item>
+<item>the chance of picking a different second person is 999 out of 9,999 (0.0999);</item>
+<item>you do not replace the first person before picking the next person.</item></list><para id="eip-854">Compare the fractions  999/10,000 and 999/9,999.  For accuracy, carry the decimal answers to 4 place decimals.  To 4 decimal places, these numbers are equivalent (0.0999).</para><para id="eip-211">Sampling without replacement instead of sampling with replacement only becomes a mathematics issue when the population is small which is not that common.  For example, if the population is 25 people, the sample is 10 and you are sampling <emphasis>with replacement for any particular sample</emphasis>,</para><list id="eip-13"><item>the chance of picking the first person is 10 out of 25 and a different second person is 9 out of 25 (you replace the first person). </item>
+</list><para id="eip-647">If you sample <emphasis>without replacement</emphasis>,</para><list id="eip-582"><item>the chance of picking the first person is 10 out of 25 and then the  second person (which is different)  is 9 out of 24 (you do not replace the first person). </item>
+</list><para id="eip-891">Compare the fractions 9/25 and 9/24.  To 4 decimal places, 9/25 = 0.3600 and 9/24 =  0.3750.  To 4 decimal places, these numbers are not equivalent. </para><para id="eip-27">You can also use R to sample with replacement by adding <code>replace = TRUE</code> to the <code>sample()</code> function. Imagine, for instance, that you want to replicate flipping a coin 20 times. Since there is only one heads and one tails in our population, we use replacement to get our sample. In the example below, we are again using the <code>set.seed()</code> function so that you can confirm that you are getting the same results.</para><code id="eip-705" display="block">
+# Simulating coin flipping
+coin.flips = c("H", "T")
+set.seed(123)
+sample(coin.flips, 30, replace = TRUE)
+##  [1] "H" "T" "H" "T" "T" "H" "T" "T" "T" "H" "T"
+## [12] "H" "T" "T" "H" "T" "H" "H" "H" "T" "T" "T"
+## [23] "T" "T" "T" "T" "T" "T" "H" "H"
+
+</code><para id="id11715554">When you analyze data, it is important to be aware of <emphasis>sampling errors</emphasis> and nonsampling errors. The actual process of sampling causes sampling errors. For example, the sample may not be large enough or representative of the population. Factors not related to the sampling process cause <emphasis>nonsampling errors</emphasis>. A defective counting device can cause a nonsampling error.</para>
+      
+      
+      
+<para id="id7645179">If we were to examine two samples representing the same population, they would, more than likely, not be the same. Just as there is variation in data, there is variation in samples. As you become accustomed to sampling, the variability will seem natural. </para>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <section id="id-425122345235">
+        <title>Optional Collaborative Classroom Exercise</title>
+<exercise id="lastex"><problem id="id1170187077053">
+        <para id="id7878578">As a class, determine whether or not the following samples are representative. If they are not, discuss the reasons.</para>
+        
+        
+        
+        <list id="element-785" list-type="enumerated"><item>To find the average GPA of all students in a university, use all honor students at the university as the sample.</item>
+	<item>To find out the most popular cereal among young people under the age of 10, stand outside a large supermarket for three hours and speak to every 20th child under age 10 who enters the supermarket.</item>
+	<item>To find the average annual income of all adults in the United States, sample U.S. congressmen. Create a cluster sample by considering each state as a stratum (group).  By using simple random sampling, select states to be part of the cluster.  Then survey every U.S. congressman in the cluster.</item>
+<item>To determine the proportion of people taking public transportation to work, survey 20 people in New York City. Conduct the survey by sitting in Central Park on a bench and interviewing every person who sits next to you.</item>
+<item>To determine the average cost of a two day stay in a hospital in Massachusetts, survey 100 hospitals across the state using simple random sampling.</item></list> </problem></exercise>
+        
+      </section>
+
+  </content>
+</document>

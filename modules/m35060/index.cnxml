@@ -1,0 +1,37 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Preface</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m35060</md:content-id>
+  <md:title>Preface</md:title>
+  <md:abstract>This module introduces the Connexions online textbook "Collaborative Statistics Using R" by Ananda Mahto based on "Collaborative Statistics" by Barbara Illowsky and Susan Dean.</md:abstract>
+  <md:uuid>0eed8bcd-b22d-4cde-9c41-5f87443f4eb6</md:uuid>
+</metadata>
+
+<content>
+    
+    
+    <section id="id-613690655174">
+      <title>About "Collaborative Statistics"</title>
+      <para id="id10457389">Collaborative Statistics was written by Barbara Illowsky and Susan Dean, faculty members at De Anza College in Cupertino, California.</para>
+      <para id="id11995224">The original preface to the book as written by professors Illowsky and Dean, now follows:</para>
+      <para id="id11941289">This book is intended for introductory statistics courses being taken by students at two– and four–year colleges who are majoring in fields other than math or engineering. Intermediate algebra is the only prerequisite. The book focuses on applications of statistical knowledge rather than the theory behind it. The text is named Collaborative Statistics because students learn best by <emphasis>doing</emphasis>. In fact, they learn best by working in small groups. The old saying “two heads are better than one” truly applies here.</para>
+      <para id="id11131060">
+        <emphasis>Our emphasis in this text is on four main concepts:</emphasis>
+      </para>
+      
+      <list id="id11879899" list-type="bulleted">
+        <item>thinking statistically</item>
+        <item>incorporating technology</item>
+        <item>working collaboratively</item>
+        <item>writing thoughtfully</item>
+      </list>
+      <para id="id10925094">These concepts are integral to our course. Students learn the best by actively participating, not by just watching and listening. Teaching should be highly interactive. Students need to be thoroughly engaged in the learning process in order to make sense of statistical concepts. Collaborative Statistics provides techniques for students to write across the curriculum, to collaborate with their peers, to think statistically, and to incorporate technology. </para>
+      <para id="element-185">This book takes students step by step. The text is interactive. Therefore, students can immediately apply what they read. Once students have completed the process of problem solving, they can tackle interesting and challenging problems relevant to today’s world. The problems require the students to apply their newly found skills. The book also contains labs that use real data and practices that lead students step by step through the problem solving process. </para>
+      
+      
+    </section><section id="eip-30"><title>About this custom edition of Collaborative Statistics</title><para id="eip-322">This custom edition of Collaborative Statistics is designed for use in a short course in introductory statistics. Additionally, the text includes examples of how to use the <emphasis>R-project</emphasis> open-source statistical package for the calculations.
+</para><para id="eip-479">R software was chosen for several reasons. First, it is free. Second, it is relatively easy to learn once you actually start using it. Third, the software is stable and quite advanced; there are many features implemented in R that are not found in commercial software packages. Fourth, R has great community support; if there are any questions you might have, there are numerous user-groups which can help you solve your problems.</para><para id="eip-662">We hope that you enjoy the process of learning about statistics and simultaneously learning how to use R.</para></section><section id="eip-817"><title>R code listings</title><para id="eip-744">
+Code listings in this text have been formatted in a way to make it easy to copy and paste from this document into an R script or an R session. All comments are preceded by a single hash symbol (<code>#</code>), and all sample output is preceded by two hash symbols (<code>##</code>). These are seen as comments by the R software, so will not be processed when you run your code.
+</para></section>
+  </content>
+</document>

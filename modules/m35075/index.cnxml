@@ -1,0 +1,275 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Stem and Leaf Graphs and Bar Graphs</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m35075</md:content-id>
+  <md:title>Stem and Leaf Graphs and Bar Graphs</md:title>
+  <md:abstract>This module introduces the use of stem-and-leaf graphs (stemplots), line graphs and bar graphs for describing a set of data visually.</md:abstract>
+  <md:uuid>574eca07-b202-4e21-9ca9-4d8b2b0caa1f</md:uuid>
+</metadata>
+
+<content>
+<para id="id6999853">One simple graph, the <emphasis>stem-and-leaf graph</emphasis> or <emphasis>stemplot</emphasis>, comes from the field of exploratory data analysis.It is a good choice when the data sets are small. To create the plot, divide each observation of data into a stem and a leaf. The leaf consists of <emphasis>one digit</emphasis>. For example, 23 has stem 2 and leaf 3. Four hundred thirty-two (432) has stem 43 and leaf 2. Five thousand four hundred thirty-two (5,432) has stem 543 and leaf 2. The decimal 9.3 has stem 9 and leaf 3. Write the stems in a vertical line from smallest the largest. Draw a vertical line to the right of the stems. Then write the leaves in increasing order next to their corresponding stem.</para>
+        
+
+<example id="element-696"><para id="element-948">For Susan Dean's spring pre-calculus class, scores for the first exam were as follows (smallest to largest):
+
+
+
+	</para><para id="id8531969">33, 42, 49, 49, 53, 55, 55, 61, 63, 67, 68, 68, 69, 69, 72, 73, 74, 78, 80, 83, 88, 88, 88, 90, 92, 94, 94, 94, 94, 96, 100</para><table id="element-185" summary="Table displaying stem in first column and leaf in second column for the values listed above."><title>Stem-and-Leaf Diagram</title>
+<tgroup cols="2"><thead>
+  <row>
+    <entry>Stem</entry>
+    <entry>Leaf</entry>
+  </row>
+</thead>
+
+<tbody>
+		<row>
+			<entry>3</entry>
+			<entry>3</entry>
+		</row>
+		<row>
+			<entry>4</entry>
+			<entry>299</entry>
+		</row>
+		<row>
+			<entry>5</entry>
+			<entry>355</entry>
+		</row>
+		<row>
+			<entry>6</entry>
+			<entry>1378899</entry>
+		</row>
+		<row>
+			<entry>7</entry>
+			<entry>2348</entry>
+		</row>
+		<row>
+			<entry>8</entry>
+			<entry>03888</entry>
+		</row>
+		<row>
+			<entry>9</entry>
+			<entry>0244446</entry>
+		</row>
+		<row>
+			<entry>10</entry>
+			<entry>0</entry>
+		</row>
+	</tbody>
+
+</tgroup>
+</table><para id="element-541">The stemplot shows that most scores fell in the 60s, 70s, 80s, and 90s.  Eight out of the 31 scores or approximately 26% of the scores were in the 90's or 100, a fairly high number of As.</para>
+</example><para id="id8073584">The stemplot is a quick way to graph and gives an exact picture of the data. You want to look for an overall pattern and any outliers. An <term target-id="outlier">outlier</term> is an observation of data that does not fit the rest of the data. It is sometimes called an <emphasis>extreme value.</emphasis> When you graph an outlier, it will appear not to fit the pattern of the graph. Some outliers are due to mistakes (for example, writing down 50 instead of 500) while others may indicate that something unusual is happening. It takes some background information to explain outliers. In the example above, there were no outliers.</para><example id="element-798"><para id="element-443">Create a stem plot using the data: 
+	</para>
+
+<para id="element-4232">1.1, 1.5, 2.3, 2.5, 2.7, 3.2, 3.3, 3.3, 3.5, 3.8, 4.0, 4.2, 4.5, 4.5, 4.7, 4.8, 5.5, 5.6, 6.5, 6.7, 12.3</para>
+<para id="element-534">The data are the distance (in kilometers) from a home to the nearest supermarket. </para>
+<exercise id="element-6923">
+<problem id="id8567884">
+<list id="element-675" list-type="enumerated"><item>Are there any outliers? </item>
+	<item>Do the data seem to have any concentration of values?</item>
+</list><note id="id8559724" type="Hint"><label>Hint</label>The leaves are to the right of the decimal.</note>
+</problem>
+<solution id="id8559734" print-placement="end">
+<para id="element-23523">
+The value 12.3 may be an outlier.  Values appear to concentrate at 3 and 4 miles.
+</para><table id="element-533" summary="">
+<tgroup cols="2"><thead>
+  <row>
+    <entry>Stem</entry>
+    <entry>Leaf</entry>
+  </row>
+</thead>
+<tbody>
+  <row>
+    <entry>1</entry>
+    <entry>1 5</entry>
+  </row>
+  <row>
+    <entry>2</entry>
+    <entry>3 5 7</entry>
+  </row>
+  <row>
+    <entry>3</entry>
+    <entry>3 3 3 5 8</entry>
+  </row>
+  <row>
+    <entry>4</entry>
+    <entry>0 2 5 5 7 8</entry>
+  </row>
+  <row>
+    <entry>5</entry>
+    <entry>5 6 6</entry>
+  </row>
+  <row>
+    <entry>6</entry>
+    <entry>5 7</entry>
+  </row>
+  <row>
+    <entry>7</entry>
+    <entry/>
+  </row>
+  <row>
+    <entry>8</entry>
+    <entry/>
+  </row>
+  <row>
+    <entry>9</entry>
+    <entry/>
+  </row>
+  <row>
+    <entry>10</entry>
+    <entry/>
+  </row>
+  <row>
+    <entry>11</entry>
+    <entry/>
+  </row>
+  <row>
+    <entry>12</entry>
+    <entry>3</entry>
+  </row>
+</tbody>
+</tgroup>
+</table>
+
+
+</solution>
+</exercise></example><section id="eip-634"><title>Stem and Leaf Plots in R</title><para id="eip-17">The <code>stem()</code> function in R is used to create stem and leaf plots. For most purposes, you do not need to pass on any other arguments; however, you may occasionally, need to use the <code>scale</code> argument to get a more usable stem and leaf plot. Notice that R tells you where the decimal is in its output so that you can easily figure out the original values.
+</para><code id="eip-425" display="block">
+
+exam.scores = c(33, 42, 49, 49, 53, 55, 55, 61, 63, 
+    67, 68, 68, 69, 69, 72, 73, 74, 78, 80, 83, 88, 
+    88, 88, 90, 92, 94, 94, 94, 94, 96, 100)
+stem(exam.scores)
+## 
+##   The decimal point is 1 digit(s) to the right of the |
+## 
+##    3 | 3
+##    4 | 299
+##    5 | 355
+##    6 | 1378899
+##    7 | 2348
+##    8 | 03888
+##    9 | 0244446
+##   10 | 0
+
+</code></section><para id="eip-856"><emphasis>Bar graphs</emphasis> consist of bars that are separated from each other.  The bars can be rectangles or they can be be rectangular boxes and they can be vertical or horizontal.  The bar graph shown in <emphasis>Example 4</emphasis> uses the data of <emphasis>Example 3</emphasis>. Frequencies are represented by the <emphasis>the heights of the bars.</emphasis></para><example id="eip-324"><para id="eip-682">In a survey, 40 mothers were asked how many times per week a teenager must be reminded to do his/her chores.  The results are shown in the table and the bar graph.
+</para><table id="eip-82" summary="The first column of the table consists of the number of times a teenager must be reminded to do his/her chores and the second column consists of frequency.">
+<tgroup cols="2"><thead>
+  <row>
+    <entry>Number of times 
+    teenager is reminded</entry>
+    <entry>Frequency</entry>
+  </row>
+</thead>
+
+<tbody>
+  <row>
+    <entry>0</entry><entry>2</entry>
+  </row>
+  <row>
+    <entry>1</entry><entry>5</entry>
+  </row>
+  <row>
+    <entry>2</entry><entry>8</entry>
+  </row>
+  <row>
+    <entry>3</entry><entry>14</entry>
+  </row>
+ <row>
+    <entry>7</entry><entry>7</entry>
+  </row>
+  <row>
+    <entry>5</entry><entry>4</entry>
+  </row> 
+  
+</tbody>
+
+
+
+</tgroup>
+</table>
+
+</example>
+
+
+
+
+
+<example id="eip-235"><para id="eip-747"><figure id="barchart1">
+<media id="bar_graph_teenager" alt="A bar graph showing the number of times a teenager needs to be reminded to do chores on the x-axis and  frequency on the y-axis.">	   
+  <image src="../../media/desc_stats_bar_graph_2.png" mime-type="image/png" print-width="4in"/></media></figure>
+
+</para>
+</example><section id="eip-153"><title>Bar Graphs in R</title><para id="eip-289">To create a bar graph in R, you need to use the <code>barplot()</code> function. There are several useful arguments for this function including:
+</para><list id="eip-286"><item><code>names.arg</code> : An object representing the values to be placed below each bar (usually the x-axis).</item>
+<item><code>xlab</code> : The title for your x-axis.</item>
+<item><code>ylab</code> : The title for your y-axis.</item>
+<item><code>main</code> : The title of your graph.</item></list><code id="eip-259" display="block">
+
+reminders = c(0, 1, 2, 3, 7, 5)
+frequency = c(2, 5, 8, 14, 7, 4)
+barplot(frequency, names.arg=reminders, 
+        xlab="Number of reminders",
+        ylab="Frequency of responses",
+        main="Number of times each week 
+that a teenager is reminded to do chores")
+
+</code><para id="eip-390"><figure id="barchart2"><media id="bar_graph_chores" alt="A bar graph showing the number of times teenagers must be reminded to do their chores.">	   
+  <image width="400px" src="../../media/barchart-chore-reminders.png" mime-type="image/png" print-width="4in"/></media></figure></para></section><para id="eip-75">The <emphasis>bar graph</emphasis> shown in <emphasis>Example 5</emphasis> has age groups  represented on the <emphasis>x-axis</emphasis> and proportions on the <emphasis>y-axis</emphasis>. </para><example id="eip-824"><para id="eip-666">By the end of March 2009, in the United States Facebook had over 56 million users.  The table shows the age groups, the number of users in each age group and the proportion (%) of users in each age group.
+
+<emphasis>Source: <cite><cite-title>http://www.insidefacebook.com/2009/03/25/number-of-us-facebook-users-over-35-nearly-doubles-in-last-60-days/</cite-title></cite></emphasis>
+  </para><table id="eip-362" summary="The information is from Facebook. The first row of the table displays age groups, the second row displays number of Facebook users and the third row displays percentages.">
+<tgroup cols="3"><thead>
+  <row>
+    <entry>Age groups</entry>
+    <entry>Number of Facebook users</entry>
+    <entry>Proportion (%) of Facebook users</entry>
+  </row>
+</thead><tbody>
+  <row>
+    <entry>13 - 25</entry>
+    <entry>25,510,040</entry>
+    <entry>46%</entry>
+  </row>
+  <row>
+    <entry>26 - 44</entry>
+    <entry>23,123,900</entry>
+    <entry>41%</entry>
+  </row>
+  <row>
+    <entry>45 - 65</entry>
+    <entry>7,431,020</entry>
+    <entry>13%</entry>
+  </row>
+</tbody>
+
+
+</tgroup>
+</table><para id="eip-93"><figure id="barchart3">
+<media id="bar_graph_Facebook" alt="A bar graph showing age groups on the x-axis and percentages of Facebook users on the y-axis.">	   
+  <image src="../../media/desc_stats_bar_graph_3.png" mime-type="image/png" print-width="4in"/></media></figure>
+</para>
+</example>
+
+
+
+
+  </content>
+
+<glossary>
+
+<definition id="outlier">
+    <term>Outlier</term>
+    <meaning id="id8560096">
+   An observation that does not fit the rest of the data.
+    </meaning>
+  </definition>
+
+
+
+</glossary>
+  
+</document>

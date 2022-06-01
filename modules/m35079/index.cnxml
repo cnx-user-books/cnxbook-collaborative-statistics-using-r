@@ -1,0 +1,25 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Introduction</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m35079</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:abstract/>
+  <md:uuid>426211b3-0697-4f1c-a748-fa355515cbe5</md:uuid>
+</metadata>
+
+<content>
+    <section id="element-982"><title>Student Learning Objectives</title>
+<para id="element-910">By the end of this chapter, the student should be able to:</para><list id="list123523"><item>Display data graphically and interpret graphs: stemplots,
+histograms and boxplots.</item>
+<item>Recognize, describe, and calculate the measures of location of data:
+quartiles and percentiles.</item>
+<item>Recognize, describe, and calculate the measures of the center of
+data: mean, median, and mode.</item>
+<item>Recognize, describe, and calculate the measures of the spread of
+data: variance, standard deviation, and range.
+</item>
+<item>Use R to generate basic graphs that help to interpret data.</item></list><para id="eip-328">The main R functions that will be used in this chapter include <code>barplot()</code>, <code>boxplot()</code>, <code>hist()</code>, <code>seq()</code>, and <code>stem()</code>.</para></section><section id="element-927"><title>Introduction</title>
+<para id="delete_me">Once you have collected data, what will you do with it?  Data can be described and presented in many different formats.  For example, suppose you are interested in buying a house in a particular area.   You may have no clue about the house prices, so you might ask your real estate agent to give you a sample data set of prices.  Looking at all the prices in the sample often is overwhelming.  A better way might be to look at the median price and the variation of prices.  The median and variation are just two ways that you will learn to describe data.  Your agent might also provide you with a graph of the data.  </para><para id="element-908">In this chapter, you will study numerical and graphical ways to describe and display your data. This area of statistics is called <emphasis>"Descriptive Statistics"</emphasis>.  You will learn to calculate, and even more importantly, to interpret these measurements and graphs.</para> </section> 
+  </content>
+  
+</document>
